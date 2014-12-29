@@ -44,7 +44,12 @@ $(document).ready(function() {
       }
     });
 
-    trip.start();
+    $('.btn-tutorial').click(function(ev) {
+      ev.preventDefault();
+      trip.start();
+    });
+
+
 
 
 });
