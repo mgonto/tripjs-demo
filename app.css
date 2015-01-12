@@ -4,11 +4,6 @@ body {
   font-size: 300%;
   font-weight: 100;
 }
-input[type=checkbox],
-input[type=radio] {
-  position: absolute;
-  opacity: 0;
-}
 input[type=checkbox] + label,
 input[type=radio] + label {
   display: inline-block;

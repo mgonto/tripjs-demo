@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
-
-    var expose = true;
-
-    var trip = new Trip([
+  var trip;
+  function createTrip(expose, animation) {
+    trip = new Trip([
       {
         sel: '.btn-create',
         content:"Please click here to go to the Applications page",
@@ -24,8 +23,11 @@ $(document).ready(function() {
         expose: expose
       }
     ], {
-      delay: -1
+      delay: -1,
+      animation: animation
     });
+  }
+
 
 
     $('.btn-create').click(function(ev) {
@@ -46,6 +48,7 @@ $(document).ready(function() {
 
     $('.btn-tutorial').click(function(ev) {
       ev.preventDefault();
+      createTrip($('#useExpose').is(':checked'), $('#animationType').find(":selected").val())
       trip.start();
     });
 
